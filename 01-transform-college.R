@@ -13,11 +13,11 @@ glimpse(scorecard)
 # 40% share of first-generation students
 filter(.data = ________, ________)
 
-# generate a data frame with the 10 most expensive colleges in 2013
+# generate a data frame with the 10 most expensive colleges in 2016
 arrange(.data = ________, ________) %>%
   slice(________)
 
-top_n(x = ________, n = ________, wt = ________)
+slice_max(.data = ________, n = ________, ________)
 
 # generate a data frame with the average SAT score for each type of college
 scorecard %>%
