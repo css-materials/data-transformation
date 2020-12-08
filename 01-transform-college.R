@@ -13,7 +13,7 @@ glimpse(scorecard)
 # 40% share of first-generation students
 filter(.data = ________, ________)
 
-# generate a data frame with the 10 most expensive colleges in 2016
+# generate a data frame with the 10 most expensive (net cost) colleges in 2018-19
 arrange(.data = ________, ________) %>%
   slice(________)
 
@@ -27,11 +27,12 @@ scorecard %>%
 # calculate for each school how many students it takes to pay
 # the average faculty member's salary and generate a data frame
 # with the school's name and the calculated value
+# - use net cost of attendance
 scorecard %>%
   mutate(________ = ________) %>%
   select(________, ________)
 
-# calculate how many private, nonprofit schools have a smaller cost
+# calculate how many private, nonprofit schools have a smaller net cost
 # than the University of Chicago
 ## Hint: the result should be a data frame with one row for the University of Chicago,
 ## and a column containing the requested value.
