@@ -17,7 +17,7 @@ filter(.data = scorecard, firstgen > .40)
 arrange(.data = scorecard, desc(netcost)) %>%
   slice(1:10)
 
-slice_max(.data = scorecard, n = 10, netcost)
+slice_max(.data = scorecard, order_by = netcost, n = 10)
 
 # generate a data frame with the average SAT score for each type of college
 scorecard %>%

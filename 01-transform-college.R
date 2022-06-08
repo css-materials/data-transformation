@@ -17,7 +17,7 @@ filter(.data = ________, ________)
 arrange(.data = ________, ________) %>%
   slice(________)
 
-slice_max(.data = ________, n = ________, ________)
+slice_max(.data = ________, order_by = ________, n = ________)
 
 # generate a data frame with the average SAT score for each type of college
 scorecard %>%
