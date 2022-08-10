@@ -1,6 +1,6 @@
 # load required packages
 library(tidyverse)
-library(rcfss)
+library(rcis)
 
 # view header of the dataset
 scorecard
@@ -33,8 +33,8 @@ scorecard %>%
   select(________, ________)
 
 # calculate how many private, nonprofit schools have a smaller net cost
-# than the University of Chicago
-## Hint: the result should be a data frame with one row for the University of Chicago,
+# than Cornell University
+## Hint: the result should be a data frame with one row for Cornell University,
 ## and a column containing the requested value.
 
 ## report the number as the total number of schools

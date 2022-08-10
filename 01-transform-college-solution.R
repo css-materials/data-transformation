@@ -1,6 +1,6 @@
 # load required packages
 library(tidyverse)
-library(rcfss)
+library(rcis)
 
 # view header of the dataset
 scorecard
@@ -33,22 +33,22 @@ scorecard %>%
   select(name, ratio)
 
 # calculate how many private, nonprofit schools have a smaller net cost
-# than the University of Chicago
-## Hint: the result should be a data frame with one row for the University of Chicago,
+# than Cornell University
+## Hint: the result should be a data frame with one row for Cornell University,
 ## and a column containing the requested value.
 
 ## report the number as the total number of schools
 scorecard %>%
   filter(type == "Private, nonprofit") %>%
   arrange(netcost) %>%
-  # use row_number() but subtract 1 since UChicago is not cheaper than itself
+  # use row_number() but subtract 1 since Cornell is not cheaper than itself
   mutate(school_cheaper = row_number() - 1) %>%
-  filter(name == "University of Chicago") %>%
+  filter(name == "Cornell University") %>%
   glimpse()
 
 ## Report the number as the percentage of schools
 scorecard %>%
   filter(type == "Private, nonprofit") %>%
   mutate(netcost_rank = percent_rank(netcost)) %>%
-  filter(name == "University of Chicago") %>%
+  filter(name == "Cornell University") %>%
   glimpse()
