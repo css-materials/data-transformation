@@ -43,7 +43,7 @@ scorecard %>%
 
 # Bonus: calculate how many private, nonprofit schools have a smaller net cost
 # than the "University of Chicago": total number of schools and percentage.
-# hint: the result should be a data frame with one row for Cornell University,
+# hint: the result should be a data frame with one row for the "University of Chicago",
 # and a column containing the requested value.
 
 ## code for the number as the total number of schools
